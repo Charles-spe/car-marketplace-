@@ -1,0 +1,30 @@
+.homepage-hero .hero-content { position: relative; z-index: 1; }
+.homepage-hero::after { z-index: 0; }
+@media (max-width: 800px) {
+  .homepage-hero { min-height: 760px; }
+  .hero-search { grid-template-columns: 1fr 1fr; gap: 0; margin-top: 30px; padding: 8px; }
+  .hero-search > div { padding: 10px 12px; }
+  .hero-search > div:nth-child(2) { border-right: 0; }
+  .hero-search > div:nth-child(3), .hero-search > div:nth-child(4) { border-top: 1px solid var(--line); }
+  .hero-search .button { grid-column: span 2; width: 100%; margin: 8px 0 0; }
+  .home-section { padding-top: 64px; padding-bottom: 72px; }
+  .body-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .body-tile { min-height: 150px; padding: 14px; }
+  .body-illustration { transform: scale(.8) skewX(-12deg); transform-origin: bottom right; }
+  .make-list { grid-template-columns: 1fr 1fr; }
+  .make-list button:nth-child(odd) { border-right: 1px solid var(--line); }
+  .make-list button:nth-child(even) { border-right: 0; }
+  .make-list button strong { font-size: 18px; }
+  .why-section, .process-section { grid-template-columns: 1fr; gap: 38px; }
+  .why-intro h2, .process-heading h2, .final-cta h2 { font-size: 40px; }
+  .benefit-grid { grid-template-columns: 1fr 1fr; }
+  .benefit-grid > div { padding: 18px 14px; }
+  .benefit-grid h3 { font-size: 14px; margin-top: 20px; }
+  .dealer-grid { grid-template-columns: 1fr; }
+  .dealer-card { min-height: 190px; }
+  .dealer-card h3 { margin-top: 38px; }
+  .process-grid { grid-template-columns: 1fr 1fr; }
+  .testimonial-grid { grid-template-columns: 1fr; gap: 36px; }
+  .testimonial-grid blockquote { font-size: 22px; }
+  .sell-banner-inner .button { width: 100%; }
+}

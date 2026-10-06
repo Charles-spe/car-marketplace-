@@ -1,0 +1,79 @@
+:root {
+  --focus-ring: 0 0 0 3px rgba(207, 77, 45, .22);
+  --shadow-card: 0 10px 28px rgba(21, 23, 25, .055);
+  --shadow-float: 0 18px 42px rgba(21, 23, 25, .15);
+}
+
+.site-header { gap: 24px; }
+.site-header nav { flex: 1; justify-content: center; gap: clamp(15px, 2vw, 30px); margin-left: 16px; }
+.site-header nav button { position: relative; min-height: 42px; font-size: 12px; white-space: nowrap; }
+.site-header nav button.active { color: var(--ink); }
+.site-header nav button.active::after { content: ''; position: absolute; left: 0; right: 0; bottom: 2px; height: 2px; background: var(--accent); }
+.brand, .button, .text-button, .profile-button, .menu-button, .back-button, .save-button, .save-detail { -webkit-tap-highlight-color: transparent; }
+.button { min-height: 46px; border-radius: 3px; font-size: 12px; transition: background-color .18s ease, color .18s ease, border-color .18s ease, box-shadow .18s ease, transform .18s ease; }
+.button:active { transform: translateY(0); }
+.button:disabled { cursor: not-allowed; opacity: .55; transform: none; box-shadow: none; }
+.text-button { min-height: 40px; }
+.site-header button:focus-visible, .site-footer button:focus-visible, .text-button:focus-visible, .back-button:focus-visible, .car-image-button:focus-visible, .save-button:focus-visible, .save-detail:focus-visible, .dealer-save:focus-visible, .body-tile:focus-visible, .dealer-card:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; box-shadow: var(--focus-ring); }
+.car-image-button { aspect-ratio: 1.58 / 1; height: auto; }
+.car-image-button img, .dealer-directory-card > img, .dealer-profile-hero > img, .gallery-main img, .gallery-thumbs img, .detail-image img, .photo-preview-grid img { object-fit: cover; }
+.car-card-body { padding: 18px 18px 19px; }
+.card-heading h3 { font-size: 16px; line-height: 1.3; }
+.card-heading strong { font-size: 15px; }
+.card-meta, .location { font-size: 11px; line-height: 1.5; }
+.kicker { line-height: 1.45; }
+.dealer-directory-card > img { aspect-ratio: 2.3 / 1; height: auto; }
+.gallery-main { aspect-ratio: 1.55 / 1; height: auto; }
+.gallery-thumbs button { aspect-ratio: 1.6 / 1; height: auto; }
+.contact-info-card > a, .footer-grid a { overflow-wrap: anywhere; }
+.contact-content { display: grid; grid-template-columns: minmax(0, 1fr) 350px; gap: 72px; align-items: start; }
+.contact-form-wrap { min-width: 0; }
+.contact-form-wrap h2 { font-size: 40px; line-height: 1.04; font-weight: 500; letter-spacing: -.045em; margin: 0 0 30px; }
+.contact-form { display: flex; flex-direction: column; align-items: stretch; gap: 0; max-width: 680px; }
+.contact-form > label { display: flex; width: 100%; flex-direction: column; align-items: stretch; gap: 8px; color: var(--muted); font-size: 10px; text-transform: uppercase; letter-spacing: .1em; margin: 0 0 19px; }
+.contact-form input, .contact-form select, .contact-form textarea { display: block; width: 100%; min-width: 0; min-height: 46px; border: 1px solid var(--line); border-radius: 2px; background: #fff; color: var(--ink); padding: 12px; font: 13px var(--sans); letter-spacing: normal; text-transform: none; outline: 0; }
+.contact-form textarea { min-height: 132px; resize: vertical; line-height: 1.55; }
+.contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus { border-color: var(--accent); box-shadow: var(--focus-ring); }
+.contact-aside { display: flex; min-width: 0; flex-direction: column; gap: 13px; }
+.contact-info-card, .contact-location-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius-md); padding: 25px; box-shadow: var(--shadow-card); }
+.contact-info-card h3 { font-family: var(--serif); font-size: 28px; line-height: 1.1; font-weight: 500; margin: 0 0 21px; }
+.contact-info-card > a { display: block; color: var(--ink); font-size: 12px; text-decoration: none; margin: 0 0 11px; }
+.contact-hours { display: flex; flex-direction: column; gap: 7px; border-top: 1px solid var(--line); padding-top: 18px; margin-top: 18px; }
+.contact-hours strong { font-size: 10px; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 3px; }
+.contact-hours span { color: var(--muted); font-size: 11px; }
+.contact-location-card { display: flex; gap: 14px; align-items: center; background: #edf0eb; box-shadow: none; }
+.location-art { width: 44px; height: 44px; flex: 0 0 auto; display: grid; place-items: center; border-radius: 50%; background: #fff; color: var(--accent); }
+.contact-success { max-width: 560px; border: 1px solid var(--line); border-radius: var(--radius-md); padding: 28px; background: #fff; box-shadow: var(--shadow-card); }
+.contact-success h3 { font-family: var(--serif); font-size: 25px; font-weight: 500; margin: 0 0 9px; }
+.contact-success p { color: var(--muted); font-size: 12px; line-height: 1.65; margin: 0 0 19px; }
+input, select, textarea { accent-color: var(--accent); }
+button, a, input, select, textarea { scroll-margin-block: 12px; }
+::selection { background: rgba(207, 77, 45, .18); color: var(--ink); }
+@media (max-width: 1080px) and (min-width: 801px) {
+  .site-header { gap: 14px; }
+  .site-header nav { gap: 13px; margin-left: 0; }
+  .site-header nav button { font-size: 11px; }
+  .header-actions { gap: 12px; }
+  .sell-button { padding-inline: 14px; }
+  .page-wrap { padding-left: 26px; padding-right: 26px; }
+  .car-grid, .browse-page .car-grid, .dealer-profile-page .car-grid { gap: 14px; }
+  .card-heading { flex-wrap: wrap; }
+}
+@media (max-width: 800px) {
+  .site-header nav.open { align-items: stretch; }
+  .site-header nav.open button { min-height: 44px; }
+  .site-header nav.open button.active::after { right: auto; width: 30px; bottom: 4px; }
+  .car-image-button { aspect-ratio: 1.42 / 1; }
+  .gallery-main { aspect-ratio: 1.25 / 1; }
+  .gallery-thumbs button { aspect-ratio: 1.4 / 1; }
+  .hero-search input, .hero-search select { min-height: 38px; }
+  .filter-field input, .filter-field select, .listing-fields input, .listing-fields select, .full-field textarea, .contact-form input, .contact-form select, .contact-form textarea { min-height: 44px; }
+  .full-field textarea, .contact-form textarea { min-height: 120px; }
+  .contact-content { display: flex; flex-direction: column; gap: 42px; padding-top: 58px; padding-bottom: 70px; }
+  .contact-form-wrap, .contact-form, .contact-aside { width: 100%; }
+  .contact-form-wrap h2 { font-size: 35px; }
+  .contact-form .button { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
